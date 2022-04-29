@@ -1,0 +1,13 @@
+table:
+  name: app_config
+  schema: platyplus
+select_permissions:
+- permission:
+    columns:
+    - deleted
+    - home
+    - id
+    - menu
+    - updated_at
+    filter: {}
+  role: me

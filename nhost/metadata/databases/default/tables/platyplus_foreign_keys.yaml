@@ -1,0 +1,14 @@
+table:
+  name: foreign_keys
+  schema: platyplus
+select_permissions:
+- permission:
+    columns:
+    - constraint
+    - delete_rule
+    - from
+    - mapping
+    - to
+    - update_rule
+    filter: {}
+  role: me

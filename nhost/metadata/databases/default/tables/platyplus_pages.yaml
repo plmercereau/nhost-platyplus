@@ -1,0 +1,15 @@
+table:
+  name: pages
+  schema: platyplus
+select_permissions:
+- permission:
+    columns:
+    - contents
+    - deleted
+    - icon
+    - id
+    - slug
+    - title
+    - updated_at
+    filter: {}
+  role: me

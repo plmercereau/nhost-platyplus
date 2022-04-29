@@ -1,0 +1,31 @@
+table:
+  name: providers
+  schema: auth
+configuration:
+  custom_column_names: {}
+  custom_name: authProviders
+  custom_root_fields:
+    delete: deleteAuthProviders
+    delete_by_pk: deleteAuthProvider
+    insert: insertAuthProviders
+    insert_one: insertAuthProvider
+    select: authProviders
+    select_aggregate: authProvidersAggregate
+    select_by_pk: authProvider
+    update: updateAuthProviders
+    update_by_pk: updateAuthProvider
+array_relationships:
+- name: account_providers
+  using:
+    foreign_key_constraint_on:
+      column: auth_provider
+      table:
+        name: account_providers
+        schema: auth
+- name: userProviders
+  using:
+    foreign_key_constraint_on:
+      column: provider_id
+      table:
+        name: user_providers
+        schema: auth
